@@ -1,0 +1,18 @@
+.homeContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+.header {
+    flex: 1;
+}
+.section {
+    flex: 2;
+    background-color: aqua;
+}
+.footer {
+    flex: 1;
+    background-color: blue;
+}

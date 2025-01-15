@@ -1,51 +1,23 @@
 import { useState } from 'react';
-import './App.css';
-import { list } from './constants'
+import { list } from './constants';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './containers/Home';
+import Header from './common/header';
+import Grid from './containers/Grid';
+import Poll from './containers/Poll';
 
 function App() {
-  const [selectedItem, setSelectedItem] = useState('');
-  const [selectedIndex, setSelectedIndex] = useState(false);
-
-  const handleClick = (itemName) => {
-    setSelectedItem(itemName.name);
-    setSelectedIndex(!selectedIndex);
-  }
 
   return (
-    <div className='container'>
-      <div className='header'>
-        
-      </div>
-      <div className='section'>
-        <div className='sidebar'>
-          {
-            list.map((item, index) => (<div className='listitem' key={index} onClick={() => handleClick(item, index)}>
-                <div className='mainDetails'>
-                <p>{item.name}</p>
-                {
-                  item?.child?.length > 0 && <p>open</p>
-                }
-                </div>
-                {
-                  ( selectedItem == item.name && selectedIndex) && (
-                    <div className="childContainer">
-                        {
-                          item.child.map((details, index) => (
-                            <div className="subItems" key={index}>
-                              <p>{details}</p>
-                            </div>
-                          )) 
-                        }
-                    </div>
-                   )
-                }
-              </div>))
-          }
-        </div>
-        <div className='content'>
-
-        </div>
-      </div>
+    <div className='mainCon'>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/grid" element={<Grid />}/>
+        <Route path="/pollWidget" element={<Poll />}/>
+      </Routes>
+    </BrowserRouter>
     </div>
   )
 }
