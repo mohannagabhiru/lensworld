@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* width: 100%; */
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+}
+/* .fields{
+    height: 100vh;
+} */
+.options{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    background-color: yellowgreen;
+    /* height: 100vh; */
+}
+button {
+    text-align: center;
+    border: none;
+    outline: none;
+}

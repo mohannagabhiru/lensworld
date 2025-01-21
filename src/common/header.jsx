@@ -14,6 +14,9 @@ const Header = () => {
             <Link to="/pollWidget">
                 <h1>pollWidget</h1>
             </Link>
+            <Link to="/countDown">
+                <h1>CountDown</h1>
+            </Link>
         </div>
     )
 }

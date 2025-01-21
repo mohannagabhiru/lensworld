@@ -5,7 +5,7 @@ import Home from './containers/Home';
 import Header from './common/header';
 import Grid from './containers/Grid';
 import Poll from './containers/Poll';
-
+import Countdown from './containers/Countdown';
 function App() {
 
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/grid" element={<Grid />}/>
         <Route path="/pollWidget" element={<Poll />}/>
+        <Route path="/countDown" element={<Countdown />}/>
       </Routes>
     </BrowserRouter>
     </div>
