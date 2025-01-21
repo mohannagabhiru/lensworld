@@ -31,7 +31,6 @@ const Countdown = () => {
                 <button type="button" name="Reset" value="Reset" onClick={handleStop}>Stop</button>
             </div>
         </div>
-        // <h1>hello</h1>
     )
 }
 
